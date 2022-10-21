@@ -1,12 +1,12 @@
 // (c) Copyright 2010-2012 MCQN Ltd.
 // Released under Apache License, version 2.0
 //
-// Simple example to show how to use the HttpClient library
+// Simple example to show how to use the ezHttpClient library
 // Get's the web page given at http://<kHostname><kPath> and
 // outputs the content to the serial port
 
 #include <SPI.h>
-#include <HttpClient.h>
+#include <ezHttpClient.h>
 #include <Ethernet.h>
 #include <EthernetClient.h>
 
@@ -42,7 +42,7 @@ void loop()
   int err =0;
   
   EthernetClient c;
-  HttpClient http(c);
+  ezHttpClient http(c);
   
   err = http.get(kHostname, kPath);
   if (err == 0)
